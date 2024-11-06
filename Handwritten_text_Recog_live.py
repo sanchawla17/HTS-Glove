@@ -7,6 +7,11 @@ import pyttsx3
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 engine = pyttsx3.init()
+
+# Adjust speech rate and volume for clearer audio output
+engine.setProperty('rate', 150)  # Adjust rate, lower means slower
+engine.setProperty('volume', 1.0)  # Max volume
+
 window = Tk()
 window.title("Handwritten Whiteboard Recognition")
 window.geometry("800x600")
